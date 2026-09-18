@@ -2,11 +2,7 @@ name: Android Build
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -14,11 +10,10 @@ permissions:
 
 jobs:
   build:
-    name: Build Android APK
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
@@ -31,10 +26,17 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Grant execute permission to Gradle
+      - name: Grant Gradle permission
         run: chmod +x ./gradlew
 
-      - name: Build Debug APK
+      - name: Build APK
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MediaDownloader-debug
+          path: app/build/outputs/apk/debug/*.apk      - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
 
       - name: Upload Debug APK
