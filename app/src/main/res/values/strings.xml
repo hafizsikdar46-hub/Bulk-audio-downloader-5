@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Media Downloader</string>
+    <string name="app_tagline">Direct, Video &amp; Playlist Downloader</string>
+    <string name="url_input_hint">Paste media or playlist URL (YouTube, MP3, MP4, M3U...)</string>
+    <string name="btn_paste">Paste</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_analyze">Analyze &amp; Download</string>
+    <string name="format_mp3">MP3 (Audio)</string>
+    <string name="format_mp4">MP4 (Video)</string>
+    <string name="channel_active_name">Active Downloads</string>
+    <string name="channel_active_desc">Shows ongoing download progress</string>
+    <string name="channel_completed_name">Download Notifications</string>
+    <string name="channel_completed_desc">Notifies when downloads finish or fail</string>
+</resources>

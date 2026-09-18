@@ -1,0 +1,6 @@
+{
+  "name": "Media Downloader",
+  "description": "Production-ready Android media downloader supporting direct media URLs, YouTube videos and public playlists, audio extraction, download queue management, and MediaStore integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
